@@ -362,8 +362,8 @@ vector<double> inputFileDouble(string fileName)
 
 	while (file.fail())
 	{
-		cout << "\nERROR: " << fileName << ", cannot be found";
-		fileName = inputString("\nEnter the name of the file: ", false);
+		cout << "\n\t\tERROR: " << fileName << ", cannot be found";
+		fileName = inputString("\n\t\tEnter the name of the file: ", false);
 		file.open(fileName);
 	}
 
@@ -374,6 +374,8 @@ vector<double> inputFileDouble(string fileName)
 	}
 
 	file.close();
+
+	cout << "\t\tCompleted read in data from file into array.\n";
 
 	return fileCopy;
 }
@@ -424,6 +426,8 @@ vector<string> inputFileString(string fileName)
 	}
 
 	file.close();
+
+	cout << "\t\tFile data read it correctly in the array\n";
 
 	return fileCopy;
 }
